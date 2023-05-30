@@ -12,6 +12,7 @@ body{
     width: 400px;
     margin:0 auto;   
     border-radius:8px;
+    border-top-left-radius: 8px;
     box-shadow: 1px 1px 5px 7px rgb(160, 159, 158) ;
     
 
@@ -25,9 +26,12 @@ body{
 .year{
     background-color: #ef5320;
     padding:7px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 .year p{
     font-size:20px;
+    
 }
 .date{
     background-color: #fe6d40;
