@@ -42,6 +42,7 @@
     list-style-type:none;
     display: flex;
     align-items: center; 
+    position: relative;
   
   
 }
@@ -88,12 +89,11 @@
 }
 .sub_menu li {
     margin-top: 10px;
+   
+}
+.icon{
     position: relative;
 }
-/* .list_sub{
-   
-    margin-top: 10px;
-} */
 .by{
     display: flex;
     align-items: center;
@@ -115,8 +115,8 @@
    justify-content: center;
    border-radius: 4px;
    position: absolute;
-   top:10px;
-   right: 110px;
+   top:-10px;
+   right: 20px;
 }
 .avatar .fa_solid{
     font-size:40px;
@@ -205,10 +205,13 @@ p{
 h3{
     color: rgb(88, 77, 77);
 }
- .fa-sort-down{
+  li .fa-sort-down{
     position: absolute;
     top:12px;
-    right: ;
+    right:0px;
+   
+    
+    
  }
 
 

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }   
+        .card{
+            width: 350px;
+            height: 410px; ;
+            margin: 0 auto;
+            margin-top: 50px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        }
+        .img{
+            width: 100%;
+            height: 270px;
+            position:relative;
+            transition: 0.8s ease ;
+            overflow: hidden;
+        }
+        img{
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.8s ease ;
+
+        }
+        .mask {
+            position: absolute;
+            background: black;
+            opacity: 0;
+            height: 270px;
+            width: 100%;
+            top: 0;
+            z-index: 2;
+            transition: 0.8s ease ;
+        }
+        .btn{
+            background-color: orangered;
+            color: #fff;
+            font-size: 13px;
+            border: none;
+        }
+        .btn_date{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            top :15px;
+            right:15px;
+            font-size:13px;
+            z-index: 3;
+        }
+        strong {
+            font-size: 18px;
+        }
+        .btn_photos{
+            padding:6px 14px;
+            position:absolute;
+            bottom:0;
+            left:0;
+            z-index: 3;
+            font-size: 14px;
+            font-weight: 530;
+        }
+        .footer{          
+            
+            display: flex;
+            padding-left:20px;
+            font-size:13px;
+            margin: 15px 0 10px;
+            color: #666666;
+        }
+        .content{
+            width: 100%;
+            height: 90px;           
+            padding: 20px;
+            overflow: hidden;
+            transition: 0.8s ease ;
+        }
+        p{
+            line-height:1.5;
+            font-size:13px;
+            padding-top:17px;
+            color: #666666;
+        }
+        h3{
+            padding-top:7px;
+            font-weight: 300;
+        }
+        /* hover */
+        .card:hover{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+        .card:hover .content{
+            height: 185px;
+            transition: 0.8s ease ;
+        }
+        .card:hover .img{
+            height: 175px;
+            transition: 0.8s ease ;
+        }
+        .card:hover img {
+            transition: 0.8s ease ;
+            transform: scale(1.3);
+        }
+        .card:hover .mask {
+            opacity: 0.5;
+            height: 175px;
+            transition: 0.8s ease ;
+        }
+    </style>
+</head>
+<body>
+    <div class="new_card">
+        <div class="card">
+            <div class="img">
+                <div class="mask"></div>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" alt="">
+                <button class="btn btn_date"> <strong>27</strong> </br>MAR</button>
+                <button class="btn btn_photos"> PHOTOS</button>
+            </div>
+            <div class="box">
+            <div class="content">
+                <h2> City Lights in NewYork </h2>
+                <h3 style="color:orangered"> The city that never sleeps.</h3>
+                <p> NewYork, the largrest city in the U.S., is an archiectural marvel with plenty of historic monuments, magnificent building  and countless dazzling skyscapers. </p>
+            
+            </div>
+            
+                <div class="footer">
+                    <div>
+                        <span> <i class="fa-regular fa-clock"></i> 6 mins ago </span>
+                    </div>
+                    <div>
+                        <span style="margin-left:20px"> <i class="fa-solid fa-comments"></i> 39 comnents </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
