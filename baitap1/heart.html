@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            box-sizing:border-box ;
+
+           
+        }
+        .div{
+            width: 700px;
+            height: 600px;
+            margin-top:100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background-color: rgb(206, 102, 120);
+            position: relative;     
+           
+        }
+
+        .fa-regular{
+            opacity: 0.08;
+            position: absolute;
+            font-size: 80px;
+            color: #cea2a2;
+            animation-name: heart_1;
+            animation-duration: 1.2s ;
+            animation-iteration-count: infinite;
+            animation-delay: 0.01s;
+            filter: drop-shadow( 1px 1px 1px #cc5757);
+            animation-timing-function: .5s;
+        }
+        .fa-solid{
+            
+            font-size: 200px; 
+            color: #fff;
+            animation-name: heart;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+            /* animation-delay: 0.01s; */
+            filter: drop-shadow( 10px 10px 10px #ed4747);
+            
+        }
+
+
+        @keyframes heart{
+            0%{
+                font-size: 200px;                       
+
+
+            }
+            50%{
+                font-size: 300px;
+
+                
+            }
+            100%{              
+              font-size:150px;                       
+             
+               
+            }
+            to{
+                font-size: 200px;   
+            }
+        }
+        @keyframes heart_1{
+           
+            from{
+                font-size: 80px;   
+            }
+            to{
+                font-size: 330px;
+                
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        
+
+            <i class="fa-regular fa-heart"></i>
+             <i class="fa-solid fa-heart"></i>
+    
+          
+       
+   
+    
+
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div{
+            width: 50px;
+            height: 50px;
+            margin-top:30px;
+        }
+        .box_1{
+            background-color: rebeccapurple;
+
+        }
+        .box_2{
+            background-color: red;
+            
+        }
+        .box_3{
+            background-color: rgb(25, 104, 173);
+            
+        }
+        .box{
+            animation-name: action1 ;
+            animation-duration: 2s, 2s ;
+            animation-delay: 1s;
+
+        }
+
+        @keyframes action1{
+            0%{
+                margin-left:0px;
+            }
+            10%{
+                margin-left:50px;
+
+            }
+            20%{
+                margin-left:25px;
+            }
+            30%{
+                margin-left:50px;
+            }
+            
+            40%{
+                margin-left:100px;  
+            }
+            50%{
+                margin-left:75px;
+            }
+            60%{
+                margin-left:120px;
+            }
+            70%{
+                margin-left:70px;
+            }
+            80%{
+                margin-left:100px;
+            }
+            90%{
+                margin-left:0px;
+            }
+
+
+        }
+        .anm{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            margin-top: 100px;
+            position: relative;
+        }
+        .anm_1{
+            animation-name: anm_2;
+            animation-duration: 6s;
+            animation-delay: 0.8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: 5s;
+        }
+
+        @keyframes anm_2{
+            from{
+                margin-top: 100px;
+                margin-left:0;
+            }
+            10%{
+                margin-top:0 ;
+                margin-left:50px ;
+            }
+            20%{
+                margin-top:100px ;
+                margin-left:80px ;
+            }
+            30%{
+                margin-top:0px ;
+                margin-left:110px ;
+            }
+            40%{
+                margin-top:100px;
+                margin-left:140px ;
+            }
+            50%{
+                margin-top:0 ;
+                margin-left:170px ;
+            }
+            60%{
+                margin-top:100px;
+                margin-left:140px ;
+            }
+            70%{
+                margin-top:0px ;
+                margin-left:110px ;
+            }
+            80%{
+                margin-top:100px ;
+                margin-left:80px ;
+            }
+            90%{
+                margin-top:0 ;
+                margin-left:50px ;
+            }
+            to{
+                margin-top: 100px;
+                margin-left:0;
+            }
+
+
+        
+        }
+
+
+        
+
+        
+        
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="box box_1"></div>
+    <div class="box box_2"></div>
+    <div class="box box_3"></div>
+
+
+    <button class="anm anm_1"></button>
+  
+    
+</body>
+</html>

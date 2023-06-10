@@ -1,8 +1,0 @@
-div navbar
-    div container = set kích thước đưa ra giữa
-        
-            div img  ảnh
-            div title 
-                div button
-            div icon
-            div avartar
