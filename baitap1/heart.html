@@ -21,54 +21,58 @@
             justify-content: center;
             align-items: center;
             border: none;
-            background-color: rgb(206, 102, 120);
-            position: relative;     
+            background-color: rgb(225, 135, 149);
+            position: relative;  
+
            
         }
 
-        .fa-regular{
-            opacity: 0.08;
+        img{
+            width: 150px;
+            
+            
             position: absolute;
-            font-size: 80px;
-            color: #cea2a2;
-            animation-name: heart_1;
+                      
+            
+            animation-name: heart;
             animation-duration: 1.2s ;
             animation-iteration-count: infinite;
             animation-delay: 0.01s;
-            filter: drop-shadow( 1px 1px 1px #cc5757);
-            animation-timing-function: .5s;
+            filter: drop-shadow( 1px 1px 1px #e2d8d8);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)s;
         }
         .fa-solid{
-            
-            font-size: 200px; 
-            color: #fff;
-            animation-name: heart;
+            opacity: 0.6;
+            font-size: 150px; 
+            color: #f0e9e916;
+            animation-name: heart_1;
             animation-duration: 1.2s;
             animation-iteration-count: infinite;
-            /* animation-delay: 0.01s; */
-            filter: drop-shadow( 10px 10px 10px #ed4747);
+            animation-delay: 0.1;
+            
+            filter: drop-shadow( 20px 20px 20px #f02727);
             
         }
 
 
         @keyframes heart{
             0%{
-                font-size: 200px;                       
+                width: 150px;                       
 
 
             }
             50%{
-                font-size: 300px;
+                width: 250px;
 
                 
             }
             100%{              
-              font-size:150px;                       
+                width:200px;                       
              
                
             }
             to{
-                font-size: 200px;   
+                width: 150px;   
             }
         }
         @keyframes heart_1{
@@ -77,7 +81,7 @@
                 font-size: 80px;   
             }
             to{
-                font-size: 330px;
+                font-size: 300px;
                 
             }
 
@@ -87,9 +91,9 @@
 <body>
     <div class="div">
         
-
-            <i class="fa-regular fa-heart"></i>
-             <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-heart"></i>
+            <img  src="https://clipart.info/images/ccovers/1580998938Heart-Red-Png-Clip-Art-Image.png" alt="">
+             
     
           
        
@@ -97,7 +101,7 @@
     
 
     </div>
-
+  
 
     
 </body>
