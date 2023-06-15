@@ -307,12 +307,12 @@ a{
     font-size: 15px;
     padding-top: 0;
 }
-.btn{
+.button{
     
-   
+   font-size: 15px;
   width:170px;
   height:44px;
-  background-color: transparent;
+  background-color: #212121;
   color:#FFFFFF;
   border:1px solid #949292;
 }
