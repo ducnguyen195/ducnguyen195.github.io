@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function today(day){
+
+       
+        let name = "";
+        
+        switch(day){
+            case 0:
+                name =" Chu Nhat";
+                break;
+            
+            case 1:
+                name =" Thu hai";
+                break;
+            
+            case 2:
+                name =" Thu Ba";
+                break;
+            
+            case 3:
+                name =" Thu Tu";
+                break;
+            
+            case 4:
+                name =" Thu Nam";
+                break;
+            
+            case 5:
+                name =" Thu Sau";
+                break;
+            case 6:
+                name =" Thu Bay";
+                break;
+            
+            }
+            return name ;
+        }    
+        console.log(today(6));
+
+
+        function month(num){
+            let a =" ";
+            switch(num) {
+                case 1:
+                case 2:
+                case 3:
+                a = " Mua xuan";
+                   break;
+                case 4:
+                case 5:
+                case 6:
+                    a = " Mua ha"
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                
+                    a = " Mua thu"
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    a = " Mua dong"
+                    break;
+                default:
+                    a ="Invalid!"
+                    break;
+            }
+            return a;
+        }
+        console.log(month(13));
+
+        //Ex 1
+        
+        function repeatString_while(string,numRepeat,join_character){
+            let a ="";
+            let n = 1;
+            while( n <= numRepeat){
+                if(n >1)
+                a += join_character;
+                a = a +string;
+                
+                n +=1 ;
+
+            }
+            return a;
+        }
+            function repeatString_for(string,numRepeat,join_character){
+            let x ="";
+            for(i=1; i<= numRepeat; i++){
+                if(i>1)
+            x = x + join_character;
+            x += string;
+
+            } return x;
+            
+        }
+           console.log(repeatString_while("abc",3,"-"));
+           console.log(repeatString_for("ABC", 3,"o.o"));
+
+        //Ex 2
+        function calculateSum_for( starNum , divideNum , endNum  ){
+            let sum = 0;
+            for( i=0; i<=100; i++)
+            if(i % 5===0){
+                sum = sum + i;
+
+            } return sum;
+            
+        }
+
+        function calculateSum_while( starNum , divideNum , endNum ){
+            let sum =0;
+            let run = 0;
+            while(run<=endNum ){
+                if(run % divideNum === 0)
+                sum = sum + run;
+                run += 1;
+            }return sum;
+        }
+
+
+
+        console.log(calculateSum_for(0,5,100));
+        console.log(calculateSum_while(0,5,100) )
+        // Ex 3
+        function calculateSphericalVolume(v){
+            let volume = 0;
+            let Pi = 3.14
+            if(v!=0){
+                volume = 4/3*Pi*(v**3);
+            }return volume;
+        }
+        console.log(calculateSphericalVolume(2))
+        //Ex 4
+
+        function calculateTotal_for(Num1,Num2){
+            let sum = 0;
+            for(i=Num1; i<=Num2; i++ ){
+                if(Num1<Num2)
+                 sum = (sum + i) ;
+                                     
+            } if(Num1>Num2 ){
+                 sum = (sum + i) ;
+
+            } return   (sum = sum -(Num1 + Num2));
+        }  
+            
+        function calculateTotal_while(Num1, Num2){
+            let sum = 0;
+            let run = 3;
+            while(run<=Num2){  
+                if(Num1>=0|| Num2>=0)              
+                sum = (sum + run) ; 
+                run ++
+                
+            }return   (sum = sum -(Num1 + Num2));
+        }
+        console.log(calculateTotal_for(3,8))
+        console.log(calculateTotal_while(3,8))
+
+        //Ex 5
+       function isPrime(num){
+        if(num<2){
+            return false;
+        }
+        for(i=2; i<=Math.sqrt(num); i++) {
+            if(num % i===0){
+                return false;
+            }
+        }           
+                return true;
+                           
+            
+            }           
+            
+       console.log(isPrime(5));
+
+       // Lab 6
+
+        function calculatePrimeNumber_for(startNum,endNum){
+            let sum =0;
+            for(i=startNum; i<=endNum; num++){
+                if(isPrime(i)===true){
+                    sum =sum +num;
+                }
+            }return sum ;
+            
+        }
+        console.log(calculatePrimeNumber_for( 2,7));
+
+        function calculatePrimeNumber_while(startNum,endNum){
+            let sum=0;
+            let run =2;
+            while(run<=endNum){
+                if(isPrime(i)===true)
+                sum= sum+run
+                num +=1
+            }return sum;
+        }
+        console.log(calculatePrimeNumber_while(2,5));
+
+        //Ex 7
+        function sumDivide_for(num){
+            let sum = 0;
+            for(i=0; i<=num; i++){
+                if(num%i===0)
+                sum=sum+i;
+            }return sum;
+    }
+            console.log(sumDivide_for(8))
+
+
+            function sumDivide_while(num){
+                let sum = 0;
+                let z =0;
+                while(z<=num){
+                    if(num % z===0)
+                    sum = sum + z
+                    z +=1
+                } return sum;
+            }
+
+                console.log(sumDivide_while(8));
+        
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
