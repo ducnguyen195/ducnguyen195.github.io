@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //Lab 1
+        
+        function numMax(num){
+            let max =num.sort((a,b)=>b-a)
+           for(i=0 ; i < num.length;i++)          
+                
+                return max[0]
+                }           
+            console.log(numMax([1,2,3,4,5]))
+
+        //Lab 2
+            function numMin(num){
+            let max =num.sort((a,b)=>a-b)
+           for(i=0 ; i < num.length;i++)          
+                
+                return max[0]
+                }           
+            console.log(numMin([1,2,3,4,5]))
+            
+        //Lab 3
+        function Remainders(num) {
+            let out = [];
+            for (let i = 0; i < num.length; i++) {
+                out.push(num[i] % 2);
+            }
+            return out;
+        }
+        console.log(Remainders([1,2,3,4,5]))
+        //Lab 4
+        function upUp(num,replace){
+            let number = []
+            for(i=0;i<=replace;i++)
+                number +=num
+            return number;
+        }
+        console.log(upUp(4 , 10))
+       
+        //Lab 5
+        function upcharacters(s,r,characters){
+            let number = []
+            for(i=0;i<=r-1;i++){
+                number += s
+                number += characters
+            }
+            return number
+            
+            
+        }
+        console.log(upcharacters('a',10,"+"))
+       
+
+
+      
+        
+
+       
+    </script>
+    
+</body>
+</html>

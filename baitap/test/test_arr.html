@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let myArr =[1,2,3,true,false,5,"Nguyen"]
+        console.log(myArr)
+        //Cắt chuỗi: slice (start ,end),subString( start,end), subStr(start, length)
+        //indexOf, lastIndexOf, incluses,slice
+        console.log(myArr.includes(true))
+        console.log(myArr.includes("Duc"))
+
+
+
+    let data = myArr.push("abc") // add  a new  element to  end array 
+    console.log(myArr)
+    console.log(data)
+
+    let data1 = myArr.pop( ) // removes the last element 
+
+    let subArr = myArr.slice()    // removes array and return a new array 
+    let subArr1 = myArr.slice(1)
+    let subArr2 = myArr.slice(1,5) //lấy end-1
+
+    console.log(subArr)
+    console.log(subArr1)
+    console.log(subArr2)
+    //ForEach
+      //BT
+      let arr=[1,2,3,4];
+      function checkArrAse_Up(arr){
+        for(i=1;i<arr.length;i++)
+            if( arr[i]< arr[i-1]){
+            return false
+        }
+        return  true
+      }
+      console.log(checkArrAse_Up(arr))
+
+      let arr1 = [ 8,7,6,5,4,3,2,1]
+      function checkArrAse_Down(arr1){        
+        for(i=1;i< arr1.length;i++)
+        if( arr1[i]< arr1[i-1]){
+            return true
+        }
+        return  false
+      
+      }    
+      
+      console.log(checkArrAse_Down(arr1))
+
+
+      let arr2 = [2,4,6,9];
+     function  checkEvenArrAsc_Up(arr2){
+        for(i=0; i<arr2.length;i++)
+        if(arr2[i]%2==1|| arr2[i]< arr2[i-1]){
+            return false
+        }else(arr2[i]%2===0|| arr2[i] > arr2[i-1])
+            
+              return true  
+             
+        
+     }
+        console.log(checkEvenArrAsc_Up(arr2))
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
