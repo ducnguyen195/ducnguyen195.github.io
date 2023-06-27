@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+        // Ex 5
+        function snake_case(string,join_character){
+            let str =  "";
+            for(i=string; i<=string; i++){
+                if(i<=string){
+                    str = str+i;
+                    str = str.toLowerCase() ;
+                              
+                }
+            }            
+                return (str.replaceAll(" ",join_character));
+        }
+
+
+            console.log(snake_case("Xin chao cac ban","+"));
+
+        //Ex 3
+        function string(a){
+            let rever = "";
+            for( let i=0; i<=a.length; i++){
+                rever= a[i]+ rever 
+            }
+                if(rever===a){
+                    return true;
+                }
+            return false;
+        }
+
+            console.log(string("abc"))
+
+        //Ex 2
+        function shortenString(s,num_character,appendStr){
+            let short = ""
+            for(i=0; i<=num_character; i++){
+                    short =short+s[i]; 
+                    
+                }
+                return (short + appendStr);
+            }            
+        
+            console.log(shortenString("xin chao cac ban",8, "++++"));
+
+        // //Ex 1
+
+        function subStr(string , n){
+            
+            for(i=0; i<=string.leng-n;i++){
+                let  sub = ""
+                for(j=i; j=i+n-1;j++){
+                    sub= sub + string[j]
+
+                }
+            }
+        }
+        
+        function checkStringExist(string,sub_string){
+            let ok = false
+            for(i=0; i<=string.length-sub_string.length; i++){
+                let sub = "";
+                for(let j=i; j<=i+sub_string.length-1; j++){
+                    sub = sub+string[j]
+                    console.log(sub)
+               }if(sub===sub_string) {
+                        return true
+                        break ; 
+                 } 
+            }    
+            return ok
+        }
+        
+        console.log(checkStringExist("I Love You", "You"))
+
+    </script>
+    
+</body>
+</html>

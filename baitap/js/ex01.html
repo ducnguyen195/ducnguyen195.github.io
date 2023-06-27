@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ function calculateFactorial(n){
+        let sum = 1;
+        for( i=1; i<=n; i++){
+            sum = sum*i;
+        }
+        return sum;
+    }
+
+console.log(calculateFactorial(5));
+
+ function reverseString(s){
+      let reverseStr ="";
+      for(i=0; i<=s.length; i++)
+      reverseStr = s[i]+reverseStr;
+      return reverseStr;
+
+ }
+ console.log(reverseString("hello"));
+
+
+function country(n){
+    let messenger = 0;
+    switch( n){
+        case "VN":
+            messenger = " xin chao";
+            break;
+        case "EN" :
+            messenger = "hello";
+            break;
+        default :
+            messenger =" invalide!" 
+            break;
+    }
+    return  messenger;
+}
+    console.log(country("EN"));
+
+
+    function chuoi(a,num, appenStr){
+        let str = "";
+        for( let i=0; i<num; i++)
+        str += a[i]
+        str +=appenStr;
+        return str;
+    }
+     console .log(chuoi("xinchaocacbandenvoiTechmaster", 4,"..."))
+
+     function writerNum( startNum,endNum){
+        for(i=startNum; i<=endNum; i++){
+            if(i%2===0){
+                document.write("<div style= 'color: red;'>"+ String[i]+ "</div>");
+            }
+        }document.write("<div style= 'color: blue;'>"+ String[i]+ "</div>");
+     }
+
+        console.log(writerNum())
+
+
+        function longnhau(x,y){
+            let = ""
+            
+
+
+
+
+
+
+    </script>
+</body>
+</html>
