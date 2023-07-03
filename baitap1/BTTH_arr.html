@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Lab 1
+        function  checkElementExist (num,check) {
+            let ok = false
+            for(i=0; i<num.length;i++){
+                if(num[i]===check){
+                    return true
+                }
+            }
+                return ok ;
+        }
+        console.log(checkElementExist([1,2,3,4,5], 5))
+
+
+        
+        //Lab 2
+        function getElementGreater(arr ,checks) {
+            let result= [];
+                for(i=0; i < arr.length;i++){
+                    if(arr[i] > checks ) {
+                        result.push(arr[i])
+                    }         
+                 
+                }
+                return result
+                
+            }
+         
+            console.log (getElementGreater([1,2,3,4,5], 2))
+
+
+            let getElementGreater_filter = (arr, checks) =>{
+                return arr.filter(x => x > checks);
+            }
+            console.log(getElementGreater_filter([1,2,3,4,5], 5))
+
+
+
+            //Lab 3
+
+
+
+            function randomHexCode(args){
+                let color ="#";
+                for(i=0; i<6; i++){
+                    color +=args[(Math.floor(Math.random() * 16))]
+
+                   
+                }
+                return color
+            }
+                    console.log(randomHexCode("0123456789ABCDEF"))
+
+
+            //Lab 4
+
+            function colorRgb(){
+                let r = Math.floor(Math.random() * 256)
+                let g = Math.floor(Math.random() * 256)
+                let b = Math.floor(Math.random() * 256)
+                return `rgb(${r},${g},${b})`
+            }
+            console.log(colorRgb())
+
+            //Lab forEach
+            let number = [1,2,3,4,5,6,7]
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
