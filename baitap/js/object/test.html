@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let products = [
+        {
+            name: "Iphone 13 Pro Max",
+            price: 30000000, 
+            brand: "Apple", 
+            count: 2, 
+        },
+        {
+            name: "Samsung Galaxy Z Fold3",
+            price: 41000000,
+            brand: "Samsung",
+            count: 1,
+        },
+        {
+            name: "IPhone 11",
+            price: 15500000,
+            brand: "Apple",
+            count: 1,
+        },
+        {
+            name: "OPPO Find X3 Pro",
+            price: 19500000,
+            brand: "OPPO",
+            count: 3,
+        },
+    ]
+        // 1. In ra thông tin các sản phẩm trong giỏ hàng theo cấu trúc sau
+        // Tên - Giá - Thương Hiệu - Số lượng
+        // Ví dụ : OPPO Find X3 Pro - 19500000 - OPPO - 3
+
+        let showInfo = arr =>{
+            arr.forEach(p =>{
+                console.log(` ${p.name} - ${p.prince}- ${p.brand}- ${p.count}`)
+            })
+        }
+        showInfo (products);
+
+        // 2. Tính tổng tiền tất cả sản phẩm trong giỏ hàng
+        
+        const totalPrice = arra4 => {
+            return arra4.reduce((arr, n) => {
+                return arr + n.price * n.count;
+            }, 0);
+        }
+        console.log(totalPrice(products));
+
+        // 3. Tìm các sản phẩm của thuơng hiệu "Apple"
+
+        function Brand(arr , brand){
+            return arr.filter(n => n.brand === brand)
+        }
+        console.log(Brand(products,'Apple'))
+
+        // 4. Tìm các sản phẩm có giá > 20000000
+            
+        function findPrice (arr ,price ){
+            return arr.filter(n => n.price > price)
+        }
+        console.log(findPrice(products,'20000000'))
+
+        // 5. Tìm các sản phẩm có chữ "pro" trong tên (Không phân biệt hoa thường)
+
+        function findBrands(arr, brands){
+            return arr.filter(n => n.name.toLowerCase().includes(brands.toLowerCase()));
+        }
+        console.log(findBrands(products,'PRo'))
+
+        // 6. Thêm 1 sản phẩm bất kỳ vào trong mảng product
+
+        products.push({
+            name : "Iphone 20 Pro Max Max",
+            price: 1000000000,
+            brand: "Apple",
+            count: 3,
+        },)
+        console.log(products)
+
+        // 7. Xóa tất cả sản phẩm của thương hiệu "Samsung" trong giỏ hàng
+
+        function  deleteBrand(arr, name){
+            return arr.filter(x => x.brand != name)
+        }
+        console.log(deleteBrand(products,"Samsung"))
+
+        // 8. Sắp xếp giỏ hàng theo price tăng dần
+
+        function arrangePrice(arr){
+            return arr.sort((x,y) => x.price - y.price)
+        }
+        console.log(arrangePrice(products))
+        // 9. Sắp xếp giỏ hàng theo count giảm dần
+        
+        function arrangePrice(arr){
+            return arr.sort((a,b) => b.count - a.count)
+        }
+        console.log(arrangePrice(products))
+
+        // 10. Lấy ra 2 sản phẩm bất kỳ trong giỏ hàng
+        function randomProduct(arr){
+           
+          
+        }
+            console.log(randomProduct(products, 2));
+
+    </script>
+</body>
+</html>

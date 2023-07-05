@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const grades = [
+        {name: 'John', grade: 8, sex: 'M'},
+        {name: 'Sarah', grade: 12, sex: 'F'},
+        {name: 'Bob', grade: 16, sex: 'M'},
+        {name: 'Johnny', grade: 2, sex: 'M'},
+        {name: 'Ethan', grade: 4, sex: 'M'},
+        {name: 'Paula', grade: 18, sex: 'F'},
+        {name: 'Donald', grade: 5, sex: 'M'},
+        {name: 'Jennifer', grade: 13, sex: 'F'},
+        {name: 'Courtney', grade: 15, sex: 'F'},
+        {name: 'Jane', grade: 9, sex: 'F'}
+        ]
+ function mapSum(arr ){
+    return arr.reduce((a,b)=>{
+        return a + b.grade / arr.length
+                
+            })
+        }
+     console.log(mapSum(grades))
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //lab 1
+        
+            let upLower = arr => {
+            return arr.map((e,i) => {
+                if(i % 2 == 0){
+                    return e.toLowerCase()
+                }
+                return e.toUpperCase()
+            })
+            }
+            console.log(upLower(['apple','banana','orange']))
+
+        //lab 2
+        function isPrime(num){
+        if(num<2){
+            return false;
+        }
+        for(i=2; i<=Math.sqrt(num); i++) {
+            if(num % i===0){
+                return false;
+            }
+        }           
+                return true;
+                           
+            
+            }        
+
+       //lab 3
+       function arra1 (s){
+        return s.filter((s) => s.length % 2 ===0);
+       }
+       console.log(arra1(['apple', 'banana', 'orange']))
+       
+       //lab 4
+       function  arra2(x){
+        return x.filter((x) => x.startsWith('o'));
+        
+        
+      
+       }
+       console.log(arra2(['apple', 'banana', 'orange']))
+
+       //lab 5
+       function arra3(n,i){
+        return n.filter((n) => 10 % n==0);
+       }
+       console.log(arra3([1, 2, 3, 4, 5]))
+       //lab 6
+       
+
+
+    
+
+    </script>
+    
+</body>
+</html>
