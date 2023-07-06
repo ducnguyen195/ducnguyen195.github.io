@@ -82,7 +82,7 @@
       // Trả về mảng các user có age > 25 và isStatus = true     
      
       function findUser(arr){
-        return arr.filter(elem => (elem.age > 25 && elem.isStatus ===true));
+        return arr.filter((e) => e.age >25 && e.isStatus === true );
       }
         console.log(findUser(users))
       //Viết function truyền vào 1 mảng các object user
