@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        //bai 1
+        function max2Numbers(arr){
+           arr.sort((x,y) => y-x)
+          return arr[0+1 ]
+
+        }
+       console.log(max2Numbers([2, 1, 3, 4]));
+  
+        //Bai 2
+      function getStringHasMaxLength(arra ){
+        let arra1 =  arra.sort((a,b) => b.length - a.length )
+        let lengthMax = arra1[0].length;
+        return arra1.filter((e) => e.length ==lengthMax)
+        
+       
+
+      }
+        console.log(getStringHasMaxLength(['aba', 'aa', 'ad', 'c', 'vcd']))
+
+
+        //Bài 3
+      function getRandomElement(arr , index){
+        let arr1 =[Math.floor(Math.random()* arr.length)];
+        return arr[arr1]
+
+      }
+      console.log(getRandomElement([3, 7, 9, 11]))
+
+      //Bài 4
+      function similarity(arr1,arr2){
+        return arr1.filter((e) => arr2.includes(e)===true)
+
+      }
+      console.log(similarity([1, 2, 3], [1, 2, 4]));
+      console.log(similarity([1, 2, 3], [3, 4, 5]));
+      //Bài 5
+
+      function arrTime(t, s){
+        // Cắt cac phần tử  đưa vào thành từng mang moi: giờ ,phút, giây
+        let splitTime = t.split(':').map(Number);
+        // Công thức tính thời gian theo giây
+        // Truyền vào vi tri của tưng mảng ==> giờ , phút ,giây + s số giây thêm
+        let mathTime = splitTime[0]*3600 + splitTime[1]*60 + splitTime[2]+s ;
+        // Chuyển thời gian từ giây về thời gian thuẩn theo : giờ , phút ,giây
+        let hh = Math.floor(mathTime/3600);
+        let mm = Math.floor((mathTime%3600)/60);
+        let ss = Math.floor(mathTime%60);
+        // Trả ra kết quả sau khi chuyển thành giờ ,sử dụng padStart của String 
+        // thêm 0 khi kết quả k đủ 2 số
+        return `${hh.toString().padStart(2,'0')} : ${mm.toString().padStart(2,'0')} : ${ss.toString().padStart(2,'0')} `;
+      }
+        console.log(arrTime("11:20:56", 20))
+      //Bài 6
+
+      users = [
+            {
+                name: "Bùi Công Sơn",
+                age: 30,
+                isStatus: true
+            },
+            {
+                name: "Nguyễn Thu Hằng",
+                age: 27,
+                isStatus: false
+            },
+            {
+                name: "Phạm Văn Dũng",
+                age: 20,
+                isStatus: false
+            }
+      ]
+      //Viết function truyền vào 1 mảng các object user.
+      // Trả về mảng các user có age > 25 và isStatus = true     
+     
+      function findUser(arr){
+        return arr.filter(elem => (elem.age > 25 && elem.isStatus ===true));
+      }
+        console.log(findUser(users))
+      //Viết function truyền vào 1 mảng các object user
+      //Trả về mảng các user có age tăng dần
+
+        function ageUp(arr1){
+          return arr1.sort((a,b)=> a.age - b.age)
+
+        }
+        //console.log(ageUp(users))
+
+
+        //Bài 7
+       function  arrReplace(arr){
+        // x là số lần lặp lại 
+        //y là phần tử trong mảng 
+        return arr.reduce(function(x,y) {
+          //Nếu x[y]  lặp lần đầu thì gán bằng 1 nếu lặp lần 2 
+          // thì  x[y] = 1 (sau lần lặp đầu) +1 => Tổng số lần lặp lại của phần tử trong mảng
+          x[y] = x[y]+1 || 1
+          return x 
+        },{})
+       }
+       console.log(arrReplace(["one", "two", "three", "one", "one", "three"]))
+
+        
+
+
+    
+    
+        
+        
+     </script>
+</body>
+</html>
