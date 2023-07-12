@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Đây là thẻ heading</h1>
+
+    <p>Thẻ para 1</p>
+    <p class="para">Thẻ para 2</p>
+
+    <p class="para">Thẻ para 3</p>
+
+    <div class="box">
+        <ul>
+            <li>Thẻ li 11</li>
+            <li class="li">Thẻ li 22</li>
+            <li style="display: none">Thẻ li 33</li>
+            <li>Thẻ li 44</li>
+        </ul>
+    </div>
+
+    <ul>
+        <li>Thẻ li 1</li>
+        <li class="li">Thẻ li 2</li>
+        <li>Thẻ li 3</li>
+        <li>Thẻ li 4</li>
+    </ul>
+
+    <div class="social-media"> 
+
+    </div>
+
+
+    <script>
+        let head = document.getElementById('heading')
+        console.log(heading)
+
+        const heading1 = document.querySelector('#heading');
+        console.log(heading1);
+        // ? p1,p2,p3, ul1, ul2 ,li3
+        const p1 = document.querySelector('p');
+        console.log(p1)
+        const p2 = document.querySelector('.para');
+        console.log(p2)
+        const p3 = document.querySelector('.para + .para');
+        console.log(p3)
+        const ul1 = document.querySelector('.box  ul');
+        const ul2 = document.querySelector('.box + ul');
+       
+
+
+        const paraList =document.querySelectorAll('p')
+        console.log(paraList)
+        for(let i=0;i< paraList.length; i ++){
+            paraList[i].style.color='red'
+
+        }
+        Array.from(paraList).map(e =>{
+            e.style.backgroundColor = 'blue'
+        })
+
+
+        //Lấy nd
+        console.log(ul1.innerHTML)
+        console.log(ul1.innerText)
+        console.log(ul1.textContent)
+
+
+        const  socialMediaList =[
+            {
+                label : " Google",
+                link : "http://google.com"
+            },
+            {
+                label : " Facebook",
+                link : "http://facebook.com"
+            },
+            {
+                label : " Instagram",
+                link : "http://instagram.com"
+            },
+        ]
+        const socialMedia = document.querySelector('.social-media')
+        let html=""
+        for( let i=0; i< socialMediaList.length; i++){
+            let html= ` <a href="${socialMediaList.link}"> ${socialMediaList.label} </a>`
+            
+            socialMedia.innerHTML =html
+        }
+        
+
+           
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
