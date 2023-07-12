@@ -38,7 +38,7 @@
 
         //BT 2
 
-        let color = document.querySelector('.ul > li');
+        let color = document.querySelectorAll('.ul > li');
         console.log(color)
         for(i = 0; i < color.length; i++){
             color[i].style.color = 'blue';
@@ -74,8 +74,8 @@
 
         let newLi4 = document.createElement('li');
             newLi4.innerText = 'Hello';
-            
-            document.body.inserBefore(newLi4,li5);
+        let  list = document.querySelector('#list')  
+              document.list.insertBefore(newLi4, li5);
 
 
 
