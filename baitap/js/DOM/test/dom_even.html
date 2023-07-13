@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        
+    </style>
+</head>
+<body>
+    <div class=" circle"></div>
+   <p> Hello World</p>
+
+    <button id="btn1" onclick="random()">Change content</button>
+    <button id="btn2">Change color</button>
+    <button id="btn3">Change background</button>
+
+    <script>
+      
+        function random() {
+                    
+            const myArray = ['apple', 'banana', 'cherry', 'orange', 'pear'];
+            const randomIndex = Math.floor(Math.random() * myArray.length);
+            const randomElement = myArray[randomIndex];
+         
+            console.log(randomElement);
+        }
+
+        
+        let btn_2 = document.querySelector('#btn2')
+        let btn_3 = document.querySelector('#btn3')
+        let para = document.querySelector('p')
+
+        btn_2.onclick = function(){
+            
+            const red = Math.floor(Math.random() * 256);
+            const green = Math.floor(Math.random() * 256);
+            const blue = Math.floor(Math.random() * 256);
+            const hex = "#" + red.toString(16) + green.toString(16) + blue.toString(16);
+
+            console.log(hex);
+        }
+
+        btn_3.addEventListener('click' ,function() {
+
+            para.classList.toggle('blue')
+        })
+
+       
+
+
+
+        
+    </script>
+</body>
+</html>
+
+    
+</body>
+</html>

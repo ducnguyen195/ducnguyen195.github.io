@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+    </ul>
+
+
+
+    <script>
+        let newButton = document.createElement('button');
+        newButton.innerText = 'ADD';
+        let newInput = document.createElement('input');
+        newInput.placeholder = 'Nhập Nội Dung';
+        document.body.prepend(newButton);
+        document.body.prepend(newInput);
+
+        let listItem = document.querySelector('li:last-child')
+        let button = document.querySelector('button');
+        let input = document.querySelector('input');
+        button.addEventListener('click', function () {
+            if (input.value.trim() === "") {
+                alert("Chưa Nhập Nội Dung ")
+            } else {
+                let newLi = document.createElement('li');
+                newLi.innerText = input.value
+                listItem.insertAdjacentElement('afterend', newLi)
+
+            }
+
+
+        })
+
+        let newRemove = document.createElement('button');
+        newRemove.innerText = 'REMOVE'
+        newRemove.className = 'remove'
+        listItem.insertAdjacentElement('afterend', newRemove);
+
+        let remove = document.querySelector(".remove")
+
+
+
+        remove.addEventListener('click', function () {
+            let removeLasChild = document.querySelector('#list li:last-child');
+                removeLasChild= list.lastChild;
+                if(removeLasChild){
+                    removeLasChild.removeChild(removeLasChild)
+                }            
+        
+        })
+
+        let newHide = document.createElement('button');
+            newHide.innerText = 'HIDE'
+            newHide.className ='hide'
+            
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

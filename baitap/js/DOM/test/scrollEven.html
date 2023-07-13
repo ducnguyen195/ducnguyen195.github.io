@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+
+        }
+
+        .btn{
+            padding: 10px 20px;
+            background-color: orangered;
+            border: none;
+            color: white;
+
+
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+    <button class="btn"> CLICK</button>
+    <script>
+        const btnTop = document.querySelector(".btn")
+        window.addEventListener("scroll",function(){
+            if(document.documentElement.scrollTop >250){
+                btnTop.style.display = 'inline-block'
+            }else{
+                btnTop.style.display = 'none'
+            }
+
+        })
+
+
+        btnTop.addEventListener("click", function(){
+            window.scrollTo({
+                top : 0,
+                behavior: "smooth"
+            })
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

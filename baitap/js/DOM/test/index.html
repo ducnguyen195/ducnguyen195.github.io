@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.4s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="circle"></div>
+    <script>
+            // document.addEventListener('click', function(event) {
+            // //Tao hinh tron
+            // const preCircle = document.querySelector('circle')
+            //         if(preCircle){
+            //             preCircle.parentElement.removeChild(preCircle)
+            //         }
+
+            
+            //     let circle = document.createElement('div')
+            //         circle.classList.add('circle');
+
+            //     // Gan vi tri
+            //     circle.style.top = ` ${event.offsetY - 50}px`;
+            //     circle.style.left = ` ${event.offsetx - 50}px`;
+
+            //     //Gan vao DOm
+            //     document.body.appendChild(circle);
+            // })
+
+
+        document.addEventListener('click', function(event) {
+        //Tao hinh tron
+        const preCircle = document.querySelector("circle")
+                if(preCircle){
+                 // Gan vi tri
+                 preCircle.style.top = ` ${event.offsetY - 50}px`
+                 preCircle.style.left = ` ${event.offsetx - 50}px`
+                }else{
+                    
+            let circle = document.createElement('div')
+                circle.classList.add('circle');
+
+            // Gan vi tri
+            circle.style.top = ` ${event.offsetY - 50}px`
+            circle.style.left = ` ${event.offsetx - 50}px`
+
+            //Gan vao DOm
+            document.body.appendChild(circle);
+                }
+
+        
+          
+        })
+
+
+
+    </script>
+</body>
+</html>
