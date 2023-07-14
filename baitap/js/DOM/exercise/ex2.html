@@ -47,24 +47,34 @@
         let newRemove = document.createElement('button');
         newRemove.innerText = 'REMOVE'
         newRemove.className = 'remove'
-        listItem.insertAdjacentElement('afterend', newRemove);
+        document.body.appendChild( newRemove);
 
-        let remove = document.querySelector(".remove")
+        let remove = document.querySelector(".remove");
+        let id = document.getElementById('list');
 
 
 
         remove.addEventListener('click', function () {
-            let removeLasChild = document.querySelector('#list li:last-child');
-                removeLasChild= list.lastChild;
-                if(removeLasChild){
-                    removeLasChild.removeChild(removeLasChild)
-                }            
+            
+                    
         
         })
 
         let newHide = document.createElement('button');
             newHide.innerText = 'HIDE'
             newHide.className ='hide'
+            id.insertAdjacentElement('beforebegin',newHide)
+        let hide = document.querySelector('.hide')
+        hide.addEventListener('click', function(){
+            if(hide.innerText == 'SHOW'){
+                id.style.display = 'block'
+                 hide.innerText ='HIDE'
+            }else{
+                id.style.display ='none'
+                hide.innerText ='SHOW'
+            }
+            
+        })
             
 
 
